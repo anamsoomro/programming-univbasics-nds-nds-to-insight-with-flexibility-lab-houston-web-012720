@@ -100,15 +100,34 @@ def movies_with_directors_set(source)
   result =[]
   i = 0
   while i < source.length do
+<<<<<<< HEAD
     name = source[i][:name]                          #"Stephen Spielberg"
     movies_collection = source[i][:movies]           #AoH of all of Stephen Spielberg's movies
     directors_result = movies_with_director_key(name, movies_collection)
     result << directors_result
+=======
+    movies_collection = []
+    name = source[i][:name]
+    inner_i = 0
+      while inner_i < source[i][:movies].length do
+        movies_collection[:title] << source[i][:movies][inner_i][:title]
+        inner_i += 1
+      end
+    result << movies_with_director_key(name, movies_collection)
+>>>>>>> 681fc337e3c01dae8c193deb890f6cd8185927af
     i += 1
   end
   result
 end
 
+<<<<<<< HEAD
+=======
+  
+  #[[{:title => "Joes Movie 1", :director_name => "Joe"}, 
+  #  {:title => "Joe's Movie 2", :director_name => "Joe"], 
+  # [{:title => "Bill's Movie 1", :director_name => "Bill"}, 
+  #  {:title => "Bill's Movie 2", :director_name => "Bill"]]
+>>>>>>> 681fc337e3c01dae8c193deb890f6cd8185927af
     
     
   
